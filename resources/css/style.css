@@ -1,0 +1,521 @@
+body {
+  margin-top: 50px;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  font-size: 16px;
+  background: url('../img/tile.jpg') top left repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h1, h2 {
+  margin: 0 0 40px;
+}
+
+h3 {
+  margin: 20px 0;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+p.lead {
+  font-weight: normal;
+}
+
+.post-image {
+  height: auto;
+}
+
+a {
+  color: #AA423C;
+}
+
+label {
+  display: bold;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="search"], input[type="url"], textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 12px;
+}
+input[type="submit"],button[type="submit"]{
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+#hero {
+  background: url('../img/hero-bg.jpg') 50% 0 repeat fixed;
+  padding: 40px 0;
+  color: white;
+  min-height: 500px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#hero article {
+  width: 100%;
+  text-align: center;
+}
+
+#hero .hero-text {
+  margin-top: 30px;
+}
+
+#price-timeline {
+  text-align: center;
+  margin: 30px 0 60px;
+}
+
+#price-timeline .price {
+  display: inline-block;
+  width: 30%;
+  margin: 0 2% 0 0;
+  background: #3e4249;
+  padding: 10px 20px 30px;
+  position: relative;
+  vertical-align: top;
+}
+
+#price-timeline .active {
+  background: #EE563D;
+}
+
+#price-timeline .price span {
+  background: #101010;
+  display: block;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  line-height: 70px;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  margin-left: -35px;
+}
+
+.btn-danger {
+  border-collapse: #d95131;
+}
+
+#price-timeline h4 small {
+  color: #fff;
+  font-weight: bold;
+  display: block;
+}
+
+#options {
+  padding: 20px 0;
+  color: #fff;
+  font-size: 20px;
+  background: #0c415e;
+}
+
+#options p {
+  margin: 7px 0 0 0;
+}
+
+section {
+  padding: 60px 0;
+}
+
+.section-header {
+  text-align: center;
+}
+
+section h2, h4 {
+  margin: 30px 0 10px;
+}
+
+#benefit {
+  background: #fff;
+}
+
+#feature {
+  text-align: center;
+  color: #fff;
+  background: #565454;
+}
+
+/*  SPRITE ICONS */
+
+i.ci {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: url('../img/icon-sprite.png') no-repeat;
+}
+
+.ci.ci-computer {
+  background-position: 0 0;
+}
+
+.ci.ci-watch {
+  background-position: -40px 0;
+}
+
+.ci.ci-calendar {
+  background-position: -80px 0;
+}
+
+.ci.ci-community {
+  background-position: -120px 0;
+}
+
+.ci.ci-instructor {
+  background-position: -160px 0;
+}
+
+.ci.ci-device {
+  background-position: -200px 0;
+}
+
+#project-section {
+  text-align: center;
+}
+
+#video-section {
+  color: #fff;
+  text-align: center;
+  background: url('../img/stuff-bg.jpg') 50% 100% repeat fixed;
+  background-size: cover;
+}
+
+#instructor {
+  background: white url('../img/brad-elvis.png') 90% -10px no-repeat;
+}
+
+#instructor h2 {
+  margin: 0 0 20px;
+}
+
+#instructor .number {
+  display: table;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background: #F34A46;
+  border-radius: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#instructor .number span {
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+#instructor .number-circle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.badge.social {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  padding: 0;
+  margin: 0 5px 20px 0;
+  border-radius: 50px;
+}
+
+.badge.social.github :hover {
+  background: #232A2E;
+}
+
+.badge.social.facebook :hover {
+  background: #295C94;
+}
+
+.badge.social.linkedin :hover {
+  background: #007AB2;
+}
+
+#opinions {
+  text-align: center;
+}
+
+.testimonial {
+  margin-bottom: 30px;
+}
+
+.testimonial img {
+  border-radius: 50%;
+}
+
+blockquote {
+  padding: 0;
+}
+
+blockquote cite {
+  display: block;
+  margin: 25px 0 0 0;
+}
+
+#opinion {
+  margin-bottom: 40px;
+}
+
+#signup {
+  color: #fff;
+  text-align: center;
+  background: url('../img/hipster-stuff.jpg')center center repeat fixed;
+  background-size: cover;
+  padding: 150px 0;
+}
+
+#signup h2 strong {
+  border-bottom: solid 2px #dd5638;
+}
+
+#signup h2 {
+  padding: 15px 0;
+}
+
+#signup .btn {
+  font-size: 24px;
+}
+
+footer {
+  background: #2b4a61;
+  color: white;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a:link, footer a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #EC4B36;
+  text-decoration: none;
+}
+
+/* ===BLOG SECTION ===*/
+
+.post, .widget, #comments {
+  position: relative;
+  border: solid 1px #ddd;
+  background: #fff;
+  margin: 0 0 40px;
+  border-radius: 4px;
+}
+
+.post header {
+  padding: 20px;
+}
+
+.post-excerpt p, .post .post-body, #comments .comments-wraper {
+  padding: 20px;
+}
+
+.post header h1, h3 {
+  margin: 0 0 15px;
+  padding: 0 0 15px;
+  border-bottom: solid 1px #ddd;
+}
+
+.post-details {
+  font-size: 12px;
+  width: 90%;
+}
+
+.post-details span.fa {
+  padding: 0 0 0 10px;
+}
+
+.post-comments-badge {
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  border: none;
+  border-radius: 100%;
+  background: #2caa3c;
+  text-align: center;
+}
+
+.post-comments-badge a {
+  color: white;
+  line-height: 50px;
+  font-size: 16px;
+  vertical-align: middle;
+  padding-right: 3px;
+}
+
+.post-comments-badge:hover {
+  background-color: #347826;
+}
+
+.post-comments-badge a:hover {
+  text-decoration: none;
+}
+
+#comments h3 {
+  font-size: 20px;
+}
+
+#comments ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#comments ol li {
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: solid 1px rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+}
+
+#comments ol li ol.children {
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+#leave-comment {
+  margin: 40px 0 0;
+  padding: 20px 0 0;
+}
+
+.feature-image {
+  display: table;
+  width: 100%;
+}
+
+.feature-image-default-alt {
+  background: url(../img/hipster-stuff.jpg) repeat fixed;
+  background-size: cover;
+}
+
+.feature-image h1 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+}
+
+#primary {
+  padding: 40px 0 30px 0;
+}
+
+.widget {
+  padding: 20px;
+}
+
+.widget h4 {
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: solid 1px #ddd;
+}
+
+.widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.widget ul li {
+  margin: 0 0 5px;
+}
+
+.widget a {
+  text-decoration: none;
+}
+
+.post-image img {
+  height: auto;
+}
+
+/*==Info Page==*/
+
+.resource {
+  width: 31.33%;
+  float: left;
+  margin: 0 3% 40px 0;
+}
+
+.resource:nth-child(3n) {
+  margin: 0;
+}
+
+/*==Media=*/
+
+@media screen and ( max-width: 991px) {
+  #instructor .container {
+    background: #fff;
+    opacity: 0.8;
+  }
+  .logo {
+    width: 97%;
+  }
+}
+
+@media screen and ( max-width: 768px) {
+  .logo {
+    width: 50%;
+  }
+  #options p {
+    margin: 0 0 10px;
+  }
+  iframe {
+    height: 240px;
+  }
+  .resource {
+    width: 48%;
+    margin-right: 2%;
+    min-height: 800px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #instructor .number {
+    height: 100px;
+    width: 100px;
+    font-size: 22px;
+  }
+  #instructor .number span {
+    font-size: 16px;
+  }
+  .resource {
+    width: 100%;
+    margin-right: 0;
+    min-height: 0;
+  }
+}
