@@ -2,7 +2,16 @@
 /*
 Template Name: Home Page
 */
+//Custom Fields
 
+//Custom Prices
+$pre_price = get_post_meta(8,'pre_price',true);
+$second_price = get_post_meta(8,'starter_price',true);
+$first_price = get_post_meta(8,'final_price',true);
+
+//BTN Url and its text
+$btn_url = get_post_meta(8,'btn_text',true);
+$btn_url = get_post_meta(8,'study_link',true);
 get_header();?>
 
   <!--===========main-->
@@ -14,20 +23,20 @@ get_header();?>
             <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/logo-bootstrap.png" alt="Bootstrap Logo" class="logo">
           </div>
           <div class="col-sm-7 main-text">
-            <h1>Jakub Wordpress Bootstrap Theme</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1><?php bloginfo('name'); ?></h1>
+            <p class="lead"><?php bloginfo('description');?></p>
             <div id="price-timeline">
               <div class="price active">
                 <h4>Pre launch price <small>Check It out</small></h4>
-                <span>$149</span>
+                <span><?php echo $pre_price; ?></span>
               </div>
               <div class="price">
                 <h4>Launch Price <small>Check It out</small></h4>
-                <span>$200</span>
+                <span><?php echo $second_price; ?></span>
               </div>
               <div class="price">
                 <h4>Final Price <small>Check It out</small></h4>
-                <span>300$</span>
+                <span><?php echo $first_price; ?></span>
               </div>
             </div>
             <p>
