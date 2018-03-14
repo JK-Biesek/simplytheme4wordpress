@@ -11,7 +11,7 @@ get_header();?>
       <div class="container clearfix">
         <div class="row">
           <div class="col-sm-5">
-            <img src="resources/img/logo-bootstrap.png" alt="Bootstrap Logo" class="logo">
+            <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/logo-bootstrap.png" alt="Bootstrap Logo" class="logo">
           </div>
           <div class="col-sm-7 main-text">
             <h1>Jakub Wordpress Bootstrap Theme</h1>
@@ -57,7 +57,7 @@ get_header();?>
   <section id="boost-income">
     <div class="container">
       <div class="section-header">
-        <img src="resources/img/icon-boost.png" alt="Boots">
+        <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-boost.png" alt="Boots">
         <h2>How to boos income</h2>
       </div>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
@@ -78,7 +78,7 @@ get_header();?>
   <section id="benefit">
     <div class="container">
       <div class="section-header">
-        <img src="resources/img/icon-pad.png" alt="Pad">
+        <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-pad.png" alt="Pad">
         <h2>Who is this website for ?</h2>
       </div>
       <div class="row">
@@ -103,7 +103,7 @@ get_header();?>
   <section id="feature">
     <div class="container">
       <div class="section-header">
-        <img src="resources/img/icon-rocket.png" alt="Rocket">
+        <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-rocket.png" alt="Rocket">
         <h2>Course Features</h2>
       </div>
       <div class="row">
@@ -141,17 +141,17 @@ get_header();?>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <strong>laboris nisi ut aliquip</strong> ex ea commodo consequat.</p>
       <div class="row">
         <div class="col-sm-4">
-          <img src="resources/img/icon-design.png" alt="Design">
+          <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-design.png" alt="Design">
           <h3>Super Modern and Awesome Design</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         </div>
         <div class="col-sm-4">
-          <img src="resources/img/icon-code.png" alt="Code">
+          <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-code.png" alt="Code">
           <h3>Great quality and clean code</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         </div>
         <div class="col-sm-4">
-          <img src="resources/img/icon-design.png" alt="Design">
+          <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-design.png" alt="Design">
           <h3>Super Modern and Awesome Design</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         </div>
@@ -224,7 +224,7 @@ get_header();?>
           <h2 id="opinion">What People think about Jakub</h2>
           <div class="row testimonial">
             <div class="col-md-4">
-              <img src="resources/img/aj.png" alt="Opinion">
+              <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/aj.png" alt="Opinion">
             </div>
             <div class="col-md-8">
               <blockquote>
@@ -235,7 +235,7 @@ get_header();?>
           </div>
           <div class="row testimonial">
             <div class="col-md-4">
-              <img src="resources/img/ben.png" alt="Opinion">
+              <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/ben.png" alt="Opinion">
             </div>
             <div class="col-md-8">
               <blockquote>
@@ -246,7 +246,7 @@ get_header();?>
           </div>
           <div class="row testimonial">
             <div class="col-md-4">
-              <img src="resources/img/ernest.png" alt="Opinion">
+              <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/ernest.png" alt="Opinion">
             </div>
             <div class="col-md-8">
               <blockquote>
