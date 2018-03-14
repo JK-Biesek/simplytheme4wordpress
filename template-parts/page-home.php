@@ -10,8 +10,12 @@ $second_price = get_post_meta(8,'starter_price',true);
 $first_price = get_post_meta(8,'final_price',true);
 
 //BTN Url and its text
-$btn_url = get_post_meta(8,'btn_text',true);
+$btn_text = get_post_meta(8,'btn_text',true);
 $btn_url = get_post_meta(8,'study_link',true);
+
+$opt_text = get_post_meta(8,'opt_text',true);
+$opt_btn_text = get_post_meta(8,'opt_btn',true);
+
 get_header();?>
 
   <!--===========main-->
@@ -40,7 +44,7 @@ get_header();?>
               </div>
             </div>
             <p>
-              <a href="#" class="btn btn-lg btn-danger" role="button">Subscribe</a>
+              <a href="<?php echo $btn_url; ?>" class="btn btn-lg btn-danger" role="button"><?php echo $btn_text; ?></a>
             </p>
           </div>
         </div>
@@ -53,11 +57,11 @@ get_header();?>
       <div class="row">
         <div class="col-sm-8">
           <p class="lead">
-            <strong>Subscribe to our mail list </strong>It is worth it ! and costs nothing.
+            <?php echo $opt_text; ?>
           </p>
         </div>
         <div class="col-sm-4">
-          <button class="btn btn-lg btn-success btn-block" id="btn-sign" data-toggle="modal" data-target="#myModal">Click here to sucbscribe</button>
+          <button class="btn btn-lg btn-success btn-block" id="btn-sign" data-toggle="modal" data-target="#myModal"><?php echo $opt_btn_text; ?></button>
         </div>
       </div>
     </div>
