@@ -16,6 +16,22 @@ $btn_url = get_post_meta(8,'study_link',true);
 $opt_text = get_post_meta(8,'opt_text',true);
 $opt_btn_text = get_post_meta(8,'opt_btn',true);
 
+//Advanced Custom Fields Plugin
+
+$income_feature_img = get_field('income_feature_image');
+$income_title_main = get_field('income_section_title');
+$income_description = get_field('icome_section_area');
+
+$income_title_one = get_field('income_title_1');
+$income_description_one = get_field('income_description_1');
+
+$income_title_two = get_field('income_title_2');
+$income_description_two = get_field('income_description_2');
+
+$who_section_img = get_field('image_section_who');
+$who_section_title = get_field('title_section_who');
+$who_section_body = get_field('section_who_body');
+
 get_header();?>
 
   <!--===========main-->
@@ -70,19 +86,22 @@ get_header();?>
   <section id="boost-income">
     <div class="container">
       <div class="section-header">
-        <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-boost.png" alt="Boots">
-        <h2>How to boos income</h2>
+        <?php
+          if(!empty($income_feature_img)){
+            echo'<img src="'.$income_feature_img[url].'" alt="'.$income_feature_img[alt].'">';
+          }
+          ?>
+        <h2><?php echo $income_title_main; ?></h2>
       </div>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="lead"><?php echo $income_description; ?></p>
       <div class="row">
         <div class="col-sm-6">
-          <h4>Make money on this theme</h4>
-          <p class="main_boost">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h4><?php echo $income_title_one; ?></h4>
+          <p class="main_boost"><?php echo $income_description_one; ?></p>
         </div>
         <div class="col-sm-6">
-          <h4>Full time income</h4>
-          <p class="main_boost">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h4><?php echo $income_title_two; ?></h4>
+          <p class="main_boost"><?php echo $income_description_two; ?></p>
         </div>
       </div>
     </div>
@@ -91,23 +110,15 @@ get_header();?>
   <section id="benefit">
     <div class="container">
       <div class="section-header">
-        <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-pad.png" alt="Pad">
-        <h2>Who is this website for ?</h2>
+        <?php
+          if(!empty($who_section_img)) :
+            echo '<img src="'.$who_section_img[url].'" alt="'.$who_section_img[alt].'">';
+          endif; ?>
+        <h2><?php echo $who_section_title;?></h2>
       </div>
       <div class="row">
         <div class="col-sm-8 offset-sm-2">
-          <h3>Wordpress Designers &amp; Developers</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <h3>Web Designers &amp; Developers</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <h3>Students</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <h3>Graphic Designers</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <?php echo $who_section_body; ?>
         </div>
       </div>
     </div>
