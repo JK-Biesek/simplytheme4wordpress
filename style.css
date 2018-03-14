@@ -639,14 +639,29 @@ i.ci {
 
 .badge.social.github :hover {
   background: #232A2E;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50px;
 }
 
 .badge.social.facebook :hover {
   background: #295C94;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50px;
 }
 
 .badge.social.linkedin :hover {
   background: #007AB2;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50px;
 }
 
 #opinions {
