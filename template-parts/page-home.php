@@ -32,6 +32,11 @@ $who_section_img = get_field('image_section_who');
 $who_section_title = get_field('title_section_who');
 $who_section_body = get_field('section_who_body');
 
+
+$feature_block_image = get_field('course_image_block');
+$feature_block_title = get_field('bloc_section_title');
+$feature_block_body = get_field('feature_block_body');
+
 get_header();?>
 
   <!--===========main-->
@@ -127,8 +132,10 @@ get_header();?>
   <section id="feature">
     <div class="container">
       <div class="section-header">
-        <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-rocket.png" alt="Rocket">
-        <h2>Course Features</h2>
+        <?php if(!empty($feature_block_image)) : echo '<img src="'.$feature_block_image[url].'" alt="'.$feature_block_image[alt].'">'; endif ?>
+        <?php echo '<h2>'.$feature_block_title.'</h2>';
+        if(!empty($feature_block_body)) : echo '<p class="lead">'.$feature_block_body.'</p>';
+        endif ?>
       </div>
       <div class="row">
         <div class="col-sm-2">
