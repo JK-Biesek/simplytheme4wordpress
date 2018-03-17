@@ -7,14 +7,6 @@ Template Name: Home Page
 $opt_text = get_post_meta(8,'opt_text',true);
 $opt_btn_text = get_post_meta(8,'opt_btn',true);
 
-//Advanced Custom Fields Plugin
-$feature_block_image = get_field('course_image_block');
-$feature_block_title = get_field('bloc_section_title');
-$feature_block_body = get_field('feature_block_body');
-
-$project_feature_title = get_field('project_feature_title');
-$project_feature_body = get_field('project_feature_body');
-
 get_header();?>
   <?php get_template_part('template-parts/content','main'); ?>
   <!--===========OPT-->
@@ -36,59 +28,9 @@ get_header();?>
   <!--===========Benefits-->
   <?php get_template_part('template-parts/content','benefit'); ?>
   <!--===========Feature-->
-  <section id="feature">
-    <div class="container">
-      <div class="section-header">
-        <?php if(!empty($feature_block_image)) : echo '<img src="'.$feature_block_image[url].'" alt="'.$feature_block_image[alt].'">'; endif ?>
-        <?php echo '<h2>'.$feature_block_title.'</h2>';
-        if(!empty($feature_block_body)) : echo '<p class="lead">'.$feature_block_body.'</p>';
-        endif ?>
-      </div>
-      <div class="row">
-        <div class="col-sm-2">
-          <i class="ci ci-computer"></i>
-          <h4>life time access to course</h4>
-        </div>
-        <div class="col-sm-2">
-          <i class="ci ci-watch"></i>
-          <h4>Avaiable at any time</h4>
-        </div>
-        <div class="col-sm-2">
-          <i class="ci ci-calendar"></i>
-          <h4>30 days of support</h4>
-        </div>
-        <div class="col-sm-2">
-          <i class="ci ci-community"></i>
-          <h4>Join us to become a happy user !</h4>
-        </div>
-        <div class="col-sm-2">
-          <i class="ci ci-device"></i>
-          <h4>Compatible at any device</h4>
-        </div>
-        <div class="col-sm-2">
-          <i class="ci ci-instructor"></i>
-          <h4>Made by developer </h4>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--===========Project-->
-  <section id="project-section">
-    <div class="container">
-       <h2><?php echo $project_feature_title;?></h2>
-      <p class="lead"><?php echo $project_feature_body;?></p>
-      <div class="row">
-        <?php $loop = new WP_Query(array('post_type' =>'project_feature','orderby'=>'post_id','order'=>'ASC'));
-        while($loop->have_posts()) : $loop->the_post(); ?>
-        <div class="col-sm-4">
-          <?php if(has_post_thumbnail()) : the_post_thumbnail(); endif;  ?>
-          <h3><?php the_title(); ?></h3>
-          <p><?php the_content(); ?></p>
-        </div>
-      <?php endwhile; ?>
-      </div>
-    </div>
-  </section>
+  <?php get_template_part('template-parts/content','feature'); ?>
+   <!--===========Project-->
+  <?php get_template_part('template-parts/content','project'); ?>
   <!--===========Video-->
   <section id="video-section">
     <div class="container">
