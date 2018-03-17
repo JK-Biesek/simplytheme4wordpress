@@ -37,6 +37,9 @@ $feature_block_image = get_field('course_image_block');
 $feature_block_title = get_field('bloc_section_title');
 $feature_block_body = get_field('feature_block_body');
 
+$project_feature_title = get_field('project_feature_title');
+$project_feature_body = get_field('project_feature_body');
+
 get_header();?>
 
   <!--===========main-->
@@ -168,24 +171,17 @@ get_header();?>
   <!--===========Project-->
   <section id="project-section">
     <div class="container">
-      <h2>Summary of Wordpress theme</h2>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <strong>laboris nisi ut aliquip</strong> ex ea commodo consequat.</p>
+       <h2><?php echo $project_feature_title;?></h2>
+      <p class="lead"><?php echo $project_feature_body;?></p>
       <div class="row">
+        <?php $loop = new WP_Query(array('post_type' =>'project_feature','orderby'=>'post_id','order'=>'ASC'));
+        while($loop->have_posts()) : $loop->the_post(); ?>
         <div class="col-sm-4">
-          <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-design.png" alt="Design">
-          <h3>Super Modern and Awesome Design</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          <?php if(has_post_thumbnail()) : the_post_thumbnail(); endif;  ?>
+          <h3><?php the_title(); ?></h3>
+          <p><?php the_content(); ?></p>
         </div>
-        <div class="col-sm-4">
-          <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-code.png" alt="Code">
-          <h3>Great quality and clean code</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="col-sm-4">
-          <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/icon-design.png" alt="Design">
-          <h3>Super Modern and Awesome Design</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
+      <?php endwhile; ?>
       </div>
     </div>
   </section>
