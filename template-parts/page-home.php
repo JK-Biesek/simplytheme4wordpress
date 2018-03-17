@@ -267,39 +267,24 @@ get_header();?>
       <div class="row">
         <div class="col-sm-8 offset-sm-2">
           <h2 id="opinion">What People think about Jakub</h2>
+          <?php $feedback_loop = new WP_Query(array('post_type' => 'feedbacks', 'orderby'=> 'post_id','order'=>'ASC'));
+
+          while ($feedback_loop->have_posts() ): $feedback_loop->the_post(); ?>
           <div class="row testimonial">
             <div class="col-md-4">
-              <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/aj.png" alt="Opinion">
+
+              <?php if (has_post_thumbnail() ) : the_post_thumbnail(array( 200, 200) );
+                endif;
+               ?>
             </div>
             <div class="col-md-8">
               <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <cite>&mdash; Jakub, completed VueJS2 course</cite>
+              <?php  the_content(); ?>
+                <cite>&mdash;<?php the_title() ?></cite>
               </blockquote>
             </div>
           </div>
-          <div class="row testimonial">
-            <div class="col-md-4">
-              <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/ben.png" alt="Opinion">
-            </div>
-            <div class="col-md-8">
-              <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <cite>&mdash; Jakub, completed VueJS2 course</cite>
-              </blockquote>
-            </div>
-          </div>
-          <div class="row testimonial">
-            <div class="col-md-4">
-              <img src="<?php bloginfo('stylesheet_directory') ?>/resources/img/ernest.png" alt="Opinion">
-            </div>
-            <div class="col-md-8">
-              <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <cite>&mdash; Jakub, completed VueJS2 course</cite>
-              </blockquote>
-            </div>
-          </div>
+          <?php endwhile; ?>
         </div>
       </div>
     </div>
