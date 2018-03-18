@@ -3,6 +3,21 @@
   Template Name: Info Page
   */
  ?>
+ <?php get_header();
+  $thumbnail_link = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+ ?>
+</header>
+<?php
+if(has_post_thumbnail()){
+  echo'<section class="feature-image" data-type="background" data-speed="4" style="background:url('.$thumbnail_link.') 10% repeat fixed; background-size: cover;">
+    <h1 class="page-title">'.get_the_title().'</h1>
+  </section>';
+}else {
+  echo'<section class="feature-image feature-image-default-alt" data-type="background" data-speed="4">
+    <h1 class="page-title">'.get_the_title().'</h1>
+  </section>';
+}
+?>
  <div class="container">
       <div class="row" id="primary">
 
@@ -62,3 +77,4 @@
       </div><!-- content -->
     </div><!-- primary -->
   </div>
+<?php get_footer(); ?>
