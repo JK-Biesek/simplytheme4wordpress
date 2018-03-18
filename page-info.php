@@ -2,8 +2,7 @@
   /*
   Template Name: Info Page
   */
- ?>
- <?php get_header();
+  get_header();
   $thumbnail_link = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
  ?>
 </header>
@@ -24,9 +23,11 @@ if(has_post_thumbnail()){
         <div id="content" class="col-sm-12">
 
           <section class="main-content">
-            <?php while (have_posts() ) : the_post(); 
+            <?php
+             while (have_posts() ) : the_post();
               the_content();
             endwhile; ?>
+            <?php $loop = new WP_Query( array( 'post_type' => 'information','orderby'=>'post_id','order'=>'ASC')); ?>
             <hr>
 
             <div class="resource-row clearfix">
@@ -35,39 +36,23 @@ if(has_post_thumbnail()){
           <div class="container">
 
             <div class="row">
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <img class="card-img-top" src="resources/img/wordpress.png" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <small class="text-muted"><a href="https://wordpress.com">https://wordpress.com</a> </small>
+              <?php while ($loop->have_posts() ) : $loop->the_post(); ?>
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <?php
+                    if(get_field('info_image')['id'] != 0) :
+                     echo'<img class="card-img-top" src="'.get_field('info_image')['url'].'" alt="'.get_field('info_image')['alt'].'">';   endif;?>
+                    <div class="card-body">
+                      <p class="card-text"><?php the_content(); ?></p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <?php if(!empty(get_field('button_text'))) : echo'<small class="text-muted">
+                        <a href="'.get_field('info_url').'">'.get_field('button_text').'</a> </small>';
+                      endif; ?>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <img class="card-img-top" src="resources/img/Prestashop-logo.png" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <small class="text-muted"><a href="https://www.prestashop.com/">https://www.prestashop.com/</a> </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <img class="card-img-top" src="resources/img/woo.png" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <small class="text-muted"><a href="https://woocomerce.com/">https://woocomerce.com/</a> </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <?php  endwhile; ?>
             </div>
           </div>
         </div>
