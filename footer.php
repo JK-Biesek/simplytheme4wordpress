@@ -30,7 +30,7 @@
 <footer>
   <div class="container">
     <div class="col-sm-3">
-      <p> <a href="#"><img src="resources/img/logo.png" alt="Bootstrap theme"> </a></p>
+      <p> <a href="#"><img src="<?php bloginfo('stylesheet_directory');?>/resources/img/logo.png " alt="Bootstrap theme"> </a></p>
     </div>
     <p class="float-right">&copy Jakub Biesek</p>
     <div class="col-sm-6">
