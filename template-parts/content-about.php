@@ -1,15 +1,15 @@
 <?php
 //ABOUT ME VARIABLES
-$about_me_title = get_field('about_me_title');
-$about_me = get_field('about_me_name');
-$biography = get_field('biography');
-$full_biography = get_field('full_biography');
-$linkedin = get_field('linkedin');
-$facebook = get_field('facebook');
-$github = get_field('github');
-$num_of_years = get_field('num_of_years');
-$num_of_github = get_field('num_of_github');
-$num_of_experience = get_field('num_of_experience');
+  $about_me_title = get_field('about_me_title');
+  $about_me = get_field('about_me_name');
+  $biography = get_field('biography');
+  $full_biography = get_field('full_biography');
+  $linkedin = get_field('linkedin');
+  $facebook = get_field('facebook');
+  $github = get_field('github');
+  $num_of_years = get_field('num_of_years');
+  $num_of_github = get_field('num_of_github');
+  $num_of_experience = get_field('num_of_experience');
  ?>
  <!--===========Instructor-->
  <section id="instructor">
