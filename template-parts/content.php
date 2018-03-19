@@ -26,8 +26,9 @@
               <span class="fa fa-folder"></span><?php the_category(' , '); ?>
               <span class="fa fa-tag"></span><?php the_tags('',',',''); ?>
               <div class="post-comments-badge">
-                <a href="#"><span class="fa fa-comments"></span>150</a>
+                <a href="#"><span class="fa fa-comments"></span><?php comments_number(0,1,'%'); ?></a>
               </div>
+									<?php edit_post_link('Edit','<div><i class="fa fa-pencil"></i>','</div>'); ?>
             </div>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
