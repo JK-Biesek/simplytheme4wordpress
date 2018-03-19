@@ -24,38 +24,25 @@
               <span class="fa fa-user"></span><?php the_author(); ?>
               <span class="fa fa-calendar"></span><?php the_date(); ?>
               <span class="fa fa-folder"></span><?php the_category(' , '); ?>
-              <span class="fa fa-tag"></span><?php the_tags('',',',''); ?>
+              <span class="fa fa-tag"></span><?php the_tags(' ',',',' '); ?>
               <div class="post-comments-badge">
-                <a href="#"><span class="fa fa-comments"></span><?php comments_number(0,1,'%'); ?></a>
+                <a href="<?php comments_link(); ?>"><span class="fa fa-comments"></span><?php comments_number(0,1,'%'); ?></a>
               </div>
-									<?php edit_post_link('Edit','<div><i class="fa fa-pencil"></i>','</div>'); ?>
+									<?php edit_post_link('Edit',' <i class="fa fa-pencil"></i>',''); ?>
             </div>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php simplytheme4wordpress_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'simplytheme4wordpress' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'simplytheme4wordpress' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
+	<?php
+	$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "medium_large" );
+		if(has_post_thumbnail() ) : echo '
+			<div class="post-images">
+				<img src="'.$thumbnail[0].'" alt="Blog image" >
+			</div>';
+		endif; ?>
+	<div class="post-excerpt">
+		<p><?php the_excerpt(); ?></p>
+	</div>
 
 	<footer class="entry-footer">
 		<?php simplytheme4wordpress_entry_footer(); ?>
