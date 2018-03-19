@@ -10,23 +10,19 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
+			<section class="feature-image feature-image-default-alt" data-type="background" data-speed="4">
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
+				the_archive_title( '<h1 class="page-title">');
+				the_archive_description( '<small class="archive-description">', '</small></h1></section>' );
 				?>
-			</header><!-- .page-header -->
-
+				<div class="container">
+					<div class="row" id="primary">
+						<main id="content" class="col-sm-8">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
@@ -44,10 +40,13 @@ get_header();
 
 		endif;
 		?>
+			</main>
+			<div class="col-sm-4">
+				<?php get_sidebar(); ?>
+			</div>
+		</div>
+	</div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
