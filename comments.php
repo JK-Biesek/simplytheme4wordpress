@@ -21,18 +21,18 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
-
+      <div class="comments-wraper">
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="comments-title">
+		<h3 class="comments-title">
 			<?php
 			$simplytheme4wordpress_comment_count = get_comments_number();
 			if ( '1' === $simplytheme4wordpress_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'simplytheme4wordpress' ),
+					esc_html__( 'One Comment on &ldquo;%1$s&rdquo;', 'simplytheme4wordpress' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
@@ -44,7 +44,7 @@ if ( post_password_required() ) {
 				);
 			}
 			?>
-		</h2><!-- .comments-title -->
+		</h3><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
 
@@ -71,5 +71,5 @@ if ( post_password_required() ) {
 
 	comment_form();
 	?>
-
+	</div>
 </div><!-- #comments -->

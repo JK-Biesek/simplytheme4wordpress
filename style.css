@@ -838,7 +838,13 @@ footer li {
   margin: 40px 0 0;
   padding: 20px 0 0;
 }
-
+#comments .comment-meta{
+	background: none;
+	color: inherit;
+}
+#comments footer a {
+color: inherit;
+}
 .mb-4, .my-4 {
   border-radius: 20px;
 }
