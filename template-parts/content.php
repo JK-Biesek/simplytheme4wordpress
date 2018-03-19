@@ -13,19 +13,22 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h3 class="entry-title">', '</h3>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
-				simplytheme4wordpress_posted_on();
-				simplytheme4wordpress_posted_by();
-				?>
-			</div><!-- .entry-meta -->
+			<div class="post-details">
+              <span class="fa fa-user"></span><?php the_author(); ?>
+              <span class="fa fa-calendar"></span><?php the_date(); ?>
+              <span class="fa fa-folder"></span><?php the_category(' , '); ?>
+              <span class="fa fa-tag"></span><?php the_tags('',',',''); ?>
+              <div class="post-comments-badge">
+                <a href="#"><span class="fa fa-comments"></span>150</a>
+              </div>
+            </div>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 

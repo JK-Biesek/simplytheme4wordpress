@@ -53,16 +53,11 @@ get_header();
 	 		endif;
 	 		?>
 		 </main>
+		 <aside class="col-sm-4">
+			<?php  get_sidebar(); ?>
+		 </aside>
 	 </div>
  </div> <!--Container-->
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
