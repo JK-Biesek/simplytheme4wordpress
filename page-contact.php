@@ -23,7 +23,9 @@ $img_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
     <div class="row" id="primary">
       <div class="col-sm-12" id="content">
         <section class="main-content">
-
+          <?php  while(have_posts() ) : the_post();
+          the_content();
+        endwhile; ?>
         </section>
       </div>
     </div>
