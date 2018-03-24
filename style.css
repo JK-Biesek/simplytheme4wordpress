@@ -424,6 +424,11 @@ label {
   display: bold;
   font-weight: bold;
 }
+.navbar-nav.ml-auto a{
+	padding-right: .5rem;
+	padding-left: .5rem;
+	color: #fff;
+}
 
 input[type="text"], input[type="password"], input[type="email"], input[type="search"], input[type="url"], textarea {
   color: #666;

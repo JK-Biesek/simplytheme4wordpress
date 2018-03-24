@@ -45,7 +45,7 @@
 					'theme_location' =>'menu-1',
 					'container' => 'nav',
 					'container_class' => 'navbar-collapse collapse',
-					'menu_class' => 'navbar-nav mr-auto',
+					'menu_class' => 'navbar-nav ml-auto',
 				) );
 				 ?>
 				</div>
