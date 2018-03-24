@@ -741,6 +741,7 @@ footer a:link, footer a:visited {
   color: #fff;
   padding: 10px;
   text-decoration: none;
+	font-weight: 300;
 }
 
 footer .float-right {
@@ -1015,4 +1016,7 @@ color: inherit;
     width: 100%;
     font-size: 16px;
   }
+}
+li.github-url a{
+	color: #DE5839;
 }

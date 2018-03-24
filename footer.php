@@ -32,7 +32,7 @@
     <div class="col-sm-3">
       <p> <a href="#"><img src="<?php bloginfo('stylesheet_directory');?>/resources/img/logo.png " alt="Bootstrap theme"> </a></p>
     </div>
-    <p class="float-right">&copy Jakub Biesek</p>
+    <p class="float-right">&copy <?php echo the_author_link().' '.date('m-Y');?></p>
     <div class="col-sm-6">
       <?php
       wp_nav_menu(array(
